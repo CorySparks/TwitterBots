@@ -6,11 +6,8 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
-
-#webpage = r"https://twitter.com/signup" # Twitter Signup apge
 name = random.choice(open('Names.txt').readlines())
-email = ""
-password = ""
+password = name + "twitterbots1"
 
 
 driver = webdriver.Chrome('/Users/cory/Desktop/PythonTwitterBot/chromedriver')
@@ -33,28 +30,3 @@ email = Email.text
 print email
 
 driver.close()
-
-'''
-
-
-driver = webdriver.Chrome()
-driver.get(webpage)
-
-sbox = driver.find_element_by_id("full-name")
-sbox.send_keys(searchterm)
-
-submit = driver.find_element_by_class_name("sbtSearch")
-submit.click()
-
-
-data = {
-        "name" : name,
-        "email" : email,
-        "pass" : password
-       }
-
-encoded_data = urllib.urlencode(data)
-content = urllib2.urlopen("http://www.abc.com/messages.php?action=send",
-        encoded_data)
-print content.readlines()
-'''

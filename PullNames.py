@@ -19,7 +19,7 @@ while True:
         for names in name:
             justName = names.contents[0]
             f = open('Names.txt','a')
-            f.write('\n' + justName + ',')
+            f.write('\n' + justName)
             f.close()
             print justName
         print "All names added to Names.txt"

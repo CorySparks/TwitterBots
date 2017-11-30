@@ -12,7 +12,8 @@ name = random.choice(open('Names.txt').readlines())
 password = name + "twitterbots1"
 
 
-driver = webdriver.Chrome('/Users/cory/Desktop/PythonTwitterBot/chromedriver')
+driver = webdriver.Firefox('/Users/cory/Desktop/TwitterBots/geckodriver')
+#driver = webdriver.Chrome('/Users/cory/Desktop/TwitterBots/chromedriver')
 
 # Google sign up address
 driver.get("https://accounts.google.com/SignUp?continue=https%3A%2F%2Fwww.google.com%2F&hl=en")
